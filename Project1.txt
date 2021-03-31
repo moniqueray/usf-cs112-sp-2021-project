@@ -1,0 +1,2 @@
+1.0 2.0 Good True
+1.0 2.0 Bad False
