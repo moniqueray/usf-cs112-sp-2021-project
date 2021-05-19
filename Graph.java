@@ -1,6 +1,7 @@
 package project2cs112;
 
-//final project 3
+//final project 4 finished
+//actual
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -14,9 +15,12 @@ import java.awt.Stroke;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
 import javax.swing.SwingUtilities;
 
 public class Graph extends JPanel {
@@ -260,6 +264,29 @@ public class Graph extends JPanel {
 		frame.add(accuracy);
 		JLabel precision = new JLabel("Precision:" + (decFormat.format(predictorKNN.getPrecision(mainPanel.data))));
 		frame.add(precision);
+		
+		
+		JLabel majorityvalue = new JLabel("Choose the majority value", JLabel.CENTER);
+		frame.add(majorityvalue);
+		
+		
+		JSlider slider = new JSlider(2, 25, 5);
+		slider.setMinorTickSpacing(1);
+		slider.setMajorTickSpacing(5);
+		slider.setPaintTicks(true);
+		frame.add(slider);
+
+		
+		JButton button = new JButton("Run Test");
+		frame.add(button);
+		
+		
+		
+		
+		
+		
+		
+		
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
